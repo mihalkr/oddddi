@@ -1,33 +1,34 @@
-class Student:
-    count_student = 0
+class Pet:
+    print("Привіт!")
+    pt = 0
 
-    def __init__(self, name, height=160):
-        self.height = height
-        self.name = name
-        Student.count_student += 1
-        print("I'm a Student!")
+    def __init__(self, nm, sp, age):
+        self.nm = nm
+        self.sp = sp
+        self.age = age
+        Pet.pt += 1
+        print("Нова тварина!")
 
-    def grow(self, grow=1):
-        if self.height + grow < 220:
-            self.height += grow
+    def gold(self, years=1):
+        self.age += years
+        print(f"{self.nm} став старшим на {years} років!")
 
     def info(self):
-        print(f"Name   : {self.name}")
-        print(f"Height : {self.height}")
+        print(f"Ім'я: {self.nm}\nВид: {self.sp}\nВік: {self.age}")
 
     def __str__(self):
-        return f"Student(name={self.name}, height={self.height})"
+        return f"Ім'я: {self.nm}\nВид: {self.sp}\nВік: {self.age}"
 
+print(Pet.pt)
 
-print(Student.count_student)
+pet1 = Pet("Барсик", "Кот", 3)
+pet1.gold(2)
+print(pet1)
 
-student1 = Student("Seryas")
-student1.grow(15)
+print(Pet.pt)
 
-print(student1)
+pet2 = Pet("Шарик", "Собака", 5)
+print(pet2)
+print(Pet.pt)
 
-print(Student.count_student)
-
-student2 = Student("Genry", 170)
-print(student2)
-print(Student.count_student)
+print(len(pet2.nm))
