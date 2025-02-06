@@ -9,11 +9,11 @@ class Pet:
         Pet.pt += 1
         print("Нова тварина!")
 
-    def gold(self, years=1):
+    def ld(self, years=1):
         self.age += years
         print(f"{self.nm} став старшим на {years} років!")
 
-    def info(self):
+    def nf(self):
         print(f"Ім'я: {self.nm}\nВид: {self.sp}\nВік: {self.age}")
 
     def __str__(self):
@@ -22,7 +22,7 @@ class Pet:
 print(Pet.pt)
 
 pet1 = Pet("Барсик", "Кот", 3)
-pet1.gold(2)
+pet1.ld(2)
 print(pet1)
 
 print(Pet.pt)
